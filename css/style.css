@@ -1,0 +1,514 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 630px;
+  margin: auto;
+}
+.container .header {
+  background: url(../img/background-1.png) #e8eced;
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 560px;
+  position: relative;
+}
+.container .header .container-greeting {
+  width: 100%;
+  height: auto;
+}
+.container .header .container-greeting .grerting {
+  position: absolute;
+  background-image: url(../img/text-background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 150px;
+  left: 140px;
+  width: 240px;
+}
+.container .header .container-greeting .grerting .content {
+  padding-top: 110px;
+  padding-left: 20px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+}
+.container .header .container-greeting .grerting .content h3 {
+  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.083;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.container .header .container-greeting .grerting .content p {
+  font-size: 10px;
+  line-height: 1.1;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 15px;
+}
+.container .header .btn-container {
+  position: absolute;
+  bottom: 60px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.container .header .btn-container .crimson-text {
+  margin: auto;
+  display: inline-block;
+  border: 1px solid #cc0d40;
+  color: #cc0d40;
+  font-size: 13px;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.green-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.green-section .content {
+  background: #11471a;
+  padding: 20px 20px 40px;
+  max-width: 380px;
+  flex-grow: 4;
+}
+.green-section .content h3 {
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.green-section .content .radio-wrap {
+  margin-bottom: 12px;
+}
+.green-section .content .radio-wrap label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: left;
+  color: #ffffff;
+}
+.green-section .content .radio-wrap label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.green-section .content .radio-wrap .checkmark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #11471a;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  transition: background 0.3s ease-out;
+}
+.green-section .content .radio-wrap label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.green-section .content .radio-wrap label input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+.green-section .picture {
+  background-image: url(../img/picture-1.png);
+  background-position: right;
+  background-size: auto 100%;
+  background-color: #fafafd;
+  width: 100%;
+  max-width: 260px;
+  flex-grow: 4;
+}
+
+.grey-section {
+  background: url(../img/bg_2_2.png) #edf0f2;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: repeat;
+  padding-top: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 35px;
+}
+.grey-section .title {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.25;
+  color: #292828;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 420px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+  min-height: 60px;
+}
+.grey-section .title::before {
+  content: "";
+  display: block;
+  background: #11471a;
+  height: 1px;
+  min-width: 50px;
+  margin-top: 7px;
+  margin-right: 15px;
+}
+.grey-section .title::after {
+  content: "";
+  display: block;
+  background: #11471a;
+  height: 1px;
+  margin-top: 7px;
+  min-width: 50px;
+  margin-left: 15px;
+}
+.grey-section .radio-cont {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+}
+.grey-section .radio-cont .radio-wrap {
+  width: 100%;
+}
+.grey-section .radio-cont .radio-wrap input {
+  display: none;
+}
+.grey-section .radio-cont .radio-wrap label span {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #292828;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #11471a;
+  background: #e0e0e0;
+  transition: background 0.3s ease-out;
+  text-align: center;
+}
+.grey-section .radio-cont .radio-wrap label span:hover {
+  background: #b4b4b4;
+}
+.grey-section .radio-cont .radio-wrap label input:checked ~ span {
+  background: #b4b4b4;
+}
+.grey-section .question-cont {
+  padding-bottom: 60px;
+}
+.grey-section .question-cont:last-child {
+  padding-bottom: 40px;
+}
+.grey-section .question-cont .light-title {
+  font-size: 12px;
+  text-align: left;
+  color: #292828;
+  font-weight: 300;
+  padding-bottom: 25px;
+}
+.grey-section .question-cont .radio-cont ~ .light-title {
+  padding-top: 40px;
+}
+.grey-section .question-cont .select-cont select {
+  color: #292828;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #11471a;
+  background: #e0e0e0;
+  padding: 10px 25px;
+  outline: none;
+  width: 100%;
+}
+.grey-section .question-cont .check-cont label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  color: #292828;
+  font-weight: bold;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.grey-section .question-cont .check-cont label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.grey-section .question-cont .check-cont .checkmark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #e0e0e0;
+  border: 1px solid #11471a;
+}
+.grey-section .question-cont .check-cont label:hover input ~ .checkmark {
+  background-color: #b4b4b4;
+}
+.grey-section .question-cont .check-cont label input:checked ~ .checkmark {
+  background-color: #11471a;
+}
+.grey-section .question-cont .check-cont .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.grey-section .question-cont .check-cont label input:checked ~ .checkmark:after {
+  display: block;
+}
+.grey-section .question-cont .check-cont label .checkmark:after {
+  left: 4px;
+  top: 3px;
+  width: 3px;
+  height: 5px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.grey-section .question-cont .textarea-cont textarea {
+  color: #292828;
+  font-size: 12px;
+  border: 1px solid #11471a;
+  background: #ffffff;
+  padding: 10px 25px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.grey-section .thank-you {
+  text-align: center;
+  font-size: 15px;
+  color: #292828;
+  padding-bottom: 30px;
+}
+.grey-section .submit-cont {
+  text-align: center;
+}
+.grey-section .btn-submit {
+  font-size: 13px;
+  font-weight: bold;
+  color: #cc0d40;
+  background: #e8eced;
+  border: 1px solid #cc0d40;
+  padding: 10px 15px;
+  transition: background 0.3s ease-out;
+}
+.grey-section .btn-submit:hover {
+  cursor: pointer;
+  background: #e0e0e0;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+  }
+
+  .grey-section {
+    background: url(../img/bg_2_2.png) #edf0f2;
+  }
+
+  .grey-section .title,
+.grey-section .radio-cont .radio-wrap label span,
+.grey-section .question-cont .light-title,
+.grey-section .question-cont .select-cont select,
+.grey-section .question-cont .check-cont label,
+.grey-section .thank-you {
+    color: #292828;
+  }
+
+  .grey-section .radio-cont .radio-wrap label span {
+    background: #e0e0e0;
+  }
+  .grey-section .radio-cont .radio-wrap label span:hover {
+    background: #b4b4b4;
+  }
+
+  .grey-section .btn-submit {
+    background-color: #edf0f2;
+    color: #cc0d40;
+    border-color: #cc0d40;
+  }
+  .grey-section .btn-submit:hover {
+    background: #e0e0e0;
+  }
+
+  .grey-section .title::after {
+    background-color: #11471a;
+  }
+
+  .grey-section .title::before {
+    background-color: #11471a;
+  }
+
+  .grey-section .radio-cont .radio-wrap label span,
+.grey-section .question-cont .check-cont .checkmark {
+    border-color: #11471a;
+  }
+
+  .grey-section .question-cont .check-cont label input:checked ~ .checkmark {
+    background-color: #11471a;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222222;
+  }
+
+  .grey-section {
+    background: url(../img/bg_2_2.png) #333333;
+  }
+
+  .grey-section .title,
+.grey-section .radio-cont .radio-wrap label span,
+.grey-section .question-cont .light-title,
+.grey-section .question-cont .select-cont select,
+.grey-section .question-cont .check-cont label,
+.grey-section .thank-you {
+    color: #bbbbbb;
+  }
+
+  .grey-section .radio-cont .radio-wrap label span {
+    background: #555555;
+  }
+  .grey-section .radio-cont .radio-wrap label span:hover {
+    background: #787878;
+  }
+
+  .grey-section .question-cont .select-cont select,
+.grey-section .question-cont .check-cont .checkmark {
+    background-color: #555555;
+  }
+
+  .grey-section .radio-cont .radio-wrap label input:checked ~ span {
+    background: #787878;
+  }
+
+  .grey-section .btn-submit {
+    background-color: #333333;
+    color: #c44567;
+    border-color: #c44567;
+  }
+  .grey-section .btn-submit:hover {
+    background-color: #444444;
+  }
+
+  .grey-section .title::after {
+    background-color: #3b6442;
+  }
+
+  .grey-section .title::before {
+    background-color: #3b6442;
+  }
+
+  .grey-section .radio-cont .radio-wrap label span,
+.grey-section .question-cont .check-cont .checkmark {
+    border-color: #3b6442;
+  }
+
+  .grey-section .question-cont .check-cont label input:checked ~ .checkmark {
+    background-color: #3b6442;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container .header .container-greeting .grerting {
+    left: 20%;
+    max-width: 100%;
+  }
+
+  .grey-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .grey-section .title::after {
+    min-width: 25px;
+    margin-left: 10px;
+  }
+
+  .grey-section .title::before {
+    min-width: 25px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container .header .container-greeting .grerting {
+    left: 10%;
+    max-width: 100%;
+  }
+
+  .grey-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
